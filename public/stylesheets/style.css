@@ -1,0 +1,88 @@
+* {
+  transition: all 0.4s;
+  word-break: break-all; }
+
+body {
+  background-color: #4b5579;
+  color: #f2b880; }
+
+img {
+  width: 200px;
+  height: 250px; }
+
+div {
+  border-radius: 5px; }
+
+li {
+  display: inline;
+  border: thick #f2b880 solid;
+  margin-right: 3px;
+  border-radius: 5px;
+  font-size: 2em;
+  text-align: center; }
+  li:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white; }
+
+.bigDadyDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+
+.bigDiv {
+  display: flex;
+  flex-direction: column;
+  border: solid 5px #c56060;
+  max-width: 95%;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.divSideBar {
+  max-width: 20%;
+  border: solid 5px #da7979;
+  padding: 1%; }
+
+.divTop {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row; }
+
+.divMiddle {
+  display: flex;
+  flex-direction: row; }
+
+.divBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.divTopLeft {
+  margin: 1%;
+  font-weight: bold;
+  font-size: 2em; }
+
+.divTopRight {
+  margin: 1%; }
+
+.divImage {
+  margin: 1%; }
+
+.divDescription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  padding: 2%;
+  border: solid 5px #c560609a;
+  background-color: rgba(0, 0, 0, 0.2); }
+
+.divBottomLeft {
+  margin: 1%; }
+
+.divBottomMiddle {
+  margin: 1%; }
+
+.divBottomRight {
+  margin: 1%; }
+
+/*# sourceMappingURL=style.css.map */

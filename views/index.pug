@@ -1,0 +1,57 @@
+extends layout
+
+block content
+  h1 Super Films 
+
+  mixin list 
+    nav
+      ul
+        li 
+          a(href='https://www.youtube.com/watch?v=dQw4w9WgXcQ') 🏠
+        li  
+          a(href='https://www.youtube.com/watch?v=dQw4w9WgXcQ') à propos
+        li 
+          a(href='https://www.youtube.com/watch?v=dQw4w9WgXcQ') Contact
+  +list 
+
+  //- mixin film (movieTitle, movieDescription, movieCategory, movieDirector, movieActor, movieDate, movieImage)
+  //-   .bigDiv
+  //-     .divTopLeft 
+  //-       p= movieTitle 
+  //-     .divTopRight
+  //-       p= movieCategory
+  //-     .divImage 
+  //-       img(src=movieImage)
+  //-     .divDescription
+  //-       p= movieDescription 
+  //-     .divBottomLeft
+  //-       p= movieDirector
+  //-     .divBottomMiddle
+  //-       p= movieActor 
+  //-     .divBottomRight 
+  //-       p= movieDate 
+      
+  div.bigDadyDiv
+    .containerBigDiv 
+      mixin film (movieTitle, movieDescription, movieCategory, movieDirector, movieActor, movieDate, movieImage)
+        .bigDiv
+          .divTop
+            .divTopLeft= movieTitle 
+            .divTopRight= movieCategory
+          .divMiddle
+            .divImage 
+              img(src=movieImage)
+            .divDescription= `Description du film: ${movieDescription}`
+          .divBottom
+            .divBottomLeft= movieDirector
+            .divBottomMiddle= movieActor 
+            .divBottomRight= movieDate 
+
+      +film ('TERMINATOR', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident fugiat inventore numquam aliquam ipsum accusantium, reiciendis consequuntur reprehenderit iusto, repellendus molestiae repudiandae fuga! Debitis ipsum ad optio, magni esse cum.', 'GneuGneuBaguarre', 'Chépa qui à fait ça', 'Shwarzy', '20/10/2001',"images/Terminator.jpg")
+      +film ('BIRDMAN', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident fugiat inventore numquam aliquam ipsum accusantium, reiciendis consequuntur reprehenderit iusto, repellendus molestiae repudiandae fuga! Debitis ipsum ad optio, magni esse cum.', 'Fantastique', 'Inaritu', 'Michaël Keaton', '2010', 'images/Birdman.jpg')
+      +film ('THE LOBSTER', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident fugiat inventore numquam aliquam ipsum accusantium, reiciendis consequuntur reprehenderit iusto, repellendus molestiae repudiandae fuga! Debitis ipsum ad optio, magni esse cum.', 'Anticipation', 'Yorgos Lanthimos', 'Colin Farrel Léa Seydoux Rachel Weisz', '2015', 'images/Lobster.jpg') 
+    
+    mixin sideBar (stuff) 
+      .divSideBar= stuff
+    
+    +sideBar ('Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, placeat cupiditate cum ab recusandae pariatur delectus voluptates saepe fuga ipsum exercitationem laudantium nam quis sint, beatae excepturi, illum blanditiis. Laboriosam tenetur quidem sunt ratione facere.')
