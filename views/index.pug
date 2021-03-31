@@ -1,19 +1,15 @@
 extends layout
 
 block content
+
+  include includes/vars.pug
+  include includes/mixins.pug
+
   h1 Super Films 
 
-  mixin list 
-    nav
-      ul
-        li 
-          a(href='https://www.youtube.com/watch?v=dQw4w9WgXcQ') 🏠
-        li  
-          a(href='https://www.youtube.com/watch?v=dQw4w9WgXcQ') à propos
-        li 
-          a(href='https://www.youtube.com/watch?v=dQw4w9WgXcQ') Contact
-  +list 
 
+
+  +list 
   //- mixin film (movieTitle, movieDescription, movieCategory, movieDirector, movieActor, movieDate, movieImage)
   //-   .bigDiv
   //-     .divTopLeft 
