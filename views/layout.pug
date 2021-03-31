@@ -1,7 +1,11 @@
+include includes/mixins.pug
 doctype html
 html
   head
-    title= title
+    title Super films
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    +list 
     block content
+    
+
